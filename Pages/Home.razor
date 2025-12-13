@@ -1,4 +1,5 @@
 ﻿@page "/"
+@using System.ComponentModel.DataAnnotations
 
 <PageTitle>Festive Tech Calendar 2025</PageTitle>
 
@@ -168,6 +169,13 @@
 				<p class="mb-0">
 					Contribution details (submission steps and publishing schedule) are shared by the organizers during the event season.
 				</p>
+
+				<div class="d-flex flex-wrap gap-2 mt-4">
+					<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contributeModal" @onclick="ResetContributionForm">
+						Submit a session ✨
+					</button>
+					<a class="btn btn-outline-primary" href="/speakers">See speakers 👥</a>
+				</div>
 			</div>
 			<div class="col-12 col-lg-5">
 				<div class="card shadow-sm">
@@ -189,6 +197,92 @@
 		</div>
 	</div>
 </section>
+
+<div class="modal fade" id="contributeModal" tabindex="-1" aria-labelledby="contributeModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div>
+					<h2 class="h5 mb-0" id="contributeModalLabel">Submit your session</h2>
+					<div class="text-body-secondary small">Share an idea as a video or an article — it’s free for everyone.</div>
+				</div>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+
+			<div class="modal-body">
+				@if (contributionSubmitted)
+				{
+					<div class="alert alert-success mb-0" role="alert">
+						<div class="fw-semibold">Thanks! Your submission is ready.</div>
+						<div class="small text-body-secondary">(Demo only) Wire this up to a backend when you’re ready to collect real submissions.</div>
+					</div>
+				}
+				else
+				{
+					<EditForm EditContext="@contributionEditContext" OnValidSubmit="OnSubmitContribution">
+						<DataAnnotationsValidator />
+						<ValidationSummary class="text-danger" />
+
+						<div class="row g-3">
+							<div class="col-12 col-md-6">
+								<div class="form-floating">
+									<InputText class="form-control" @bind-Value="contribution.FirstName" placeholder="First name" />
+									<label>First name</label>
+								</div>
+							</div>
+							<div class="col-12 col-md-6">
+								<div class="form-floating">
+									<InputText class="form-control" @bind-Value="contribution.LastName" placeholder="Last name" />
+									<label>Last name</label>
+								</div>
+							</div>
+
+							<div class="col-12">
+								<div class="form-floating">
+									<InputText class="form-control" @bind-Value="contribution.SessionName" placeholder="Session name" />
+									<label>Session name</label>
+								</div>
+							</div>
+
+							<div class="col-12">
+								<div class="form-floating">
+									<InputTextArea class="form-control" style="height: 140px" @bind-Value="contribution.Description" placeholder="Description"></InputTextArea>
+									<label>Description</label>
+								</div>
+								<div class="form-text">Keep it short: audience, what they’ll learn, and prerequisites.</div>
+							</div>
+
+							<div class="col-12 col-md-6">
+								<label class="form-label">Chosen date</label>
+								<InputDate class="form-control" @bind-Value="contribution.ChosenDate" />
+							</div>
+
+							<div class="col-12 col-md-6">
+								<label class="form-label">Format</label>
+								<InputSelect class="form-select" @bind-Value="contribution.Format">
+									<option value="Video">Video</option>
+									<option value="Article">Article</option>
+								</InputSelect>
+							</div>
+						</div>
+					</EditForm>
+				}
+			</div>
+
+			<div class="modal-footer">
+				@if (contributionSubmitted)
+				{
+					<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Done</button>
+				}
+				else
+				{
+					<button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary" @onclick="TrySubmitContribution">Submit</button>
+				}
+			</div>
+		</div>
+	</div>
+</div>
 
 <section id="donate" class="py-5">
 	<div class="container">
@@ -225,6 +319,31 @@
 @code {
 	private sealed record EventSample(int Day, string Subject, string Format, string Details);
 
+	private sealed class ContributionForm
+	{
+		[Required, MinLength(2)]
+		public string? FirstName { get; set; }
+
+		[Required, MinLength(2)]
+		public string? LastName { get; set; }
+
+		[Required, MinLength(4)]
+		public string? SessionName { get; set; }
+
+		[Required, MinLength(20)]
+		public string? Description { get; set; }
+
+		[Required]
+		public DateTime? ChosenDate { get; set; } = DateTime.Today;
+
+		[Required]
+		public string Format { get; set; } = "Video";
+	}
+
+	private ContributionForm contribution = new();
+	private EditContext contributionEditContext = default!;
+	private bool contributionSubmitted;
+
 	private static readonly IReadOnlyList<EventSample> Samples =
 	[
 		new(1, "Kickoff: Building on Azure", "Video", "Modern cloud foundations, best practices, and what to expect this December."),
@@ -234,4 +353,33 @@
 		new(5, "Building Agentic Apps", "Video", "Designing AI agents and integrating them into real products responsibly."),
 		new(6, "Cloud Cost & Performance", "Article", "Tuning performance and keeping things scalable and cost-aware."),
 	];
+
+	private void ResetContributionForm()
+	{
+		contributionSubmitted = false;
+		contribution = new ContributionForm
+		{
+			ChosenDate = DateTime.Today,
+			Format = "Video"
+		};
+		contributionEditContext = new EditContext(contribution);
+	}
+
+	private void OnSubmitContribution()
+	{
+		contributionSubmitted = true;
+	}
+
+	protected override void OnInitialized()
+	{
+		ResetContributionForm();
+	}
+
+	private void TrySubmitContribution()
+	{
+		if (contributionEditContext.Validate())
+		{
+			OnSubmitContribution();
+		}
+	}
 }

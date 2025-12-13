@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "MyFestiveTech",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-DA6TgJUt1zZQ4+SvfoHM+sMyBVTmUd9F+Tha1B17vxk=",
+    "hash": "sha256-lOxmIS8g93w0ExmXRg5mu1CZWRvAHpF1EbVcA4durqA=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.cs8mcre4gh.js"
@@ -1039,15 +1039,15 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "MyFestiveTech.wasm",
-        "name": "MyFestiveTech.7lmfdiyq8h.wasm",
-        "integrity": "sha256-5YqJAH2bF0HoliB+MZW/uoPb3abF7R8uINB0pgR5vY4="
+        "name": "MyFestiveTech.ruglukwyc9.wasm",
+        "integrity": "sha256-k3aLA91eH+cDl6pAjn/R10GMt50IKWV/Tww3sB6xhBY="
       }
     ],
     "pdb": [
       {
         "virtualPath": "MyFestiveTech.pdb",
-        "name": "MyFestiveTech.9d0sx2ls4b.pdb",
-        "integrity": "sha256-3UlSD6eu6hMCtqlsyS4lwrzxaAfzUnIodnjk9xdvzQA="
+        "name": "MyFestiveTech.n76yyu7d9e.pdb",
+        "integrity": "sha256-DWItsVlekt2RwUjCtXDMfAgwbdaT9jBRTAo7YlmrIF0="
       }
     ],
     "libraryInitializers": [
