@@ -1,0 +1,38 @@
+.ft-navbar[b-vh2qvmwg70] {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    background-image: linear-gradient(90deg, var(--bs-warning), var(--bs-dark));
+    backdrop-filter: saturate(140%) blur(6px);
+}
+
+.navbar-brand[b-vh2qvmwg70] {
+    font-size: 1.05rem;
+}
+
+.ft-navbar .nav-link[b-vh2qvmwg70] {
+    position: relative;
+    padding-inline: 0.85rem;
+    border-radius: 999px;
+    transition: background-color 160ms ease, transform 160ms ease, color 160ms ease;
+}
+
+.ft-navbar .nav-link:hover[b-vh2qvmwg70] {
+    background-color: rgba(255, 255, 255, 0.12);
+    transform: translateY(-1px);
+}
+
+.ft-navbar .nav-link.active[b-vh2qvmwg70] {
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+.ft-theme-toggle[b-vh2qvmwg70] {
+    border-radius: 999px;
+    padding-inline: 0.9rem;
+}
+
+[data-bs-theme="dark"] .ft-navbar[b-vh2qvmwg70] {
+    background-image: linear-gradient(90deg, var(--bs-warning), var(--bs-black));
+}
+
+[data-bs-theme="light"] .ft-navbar[b-vh2qvmwg70] {
+    background-image: linear-gradient(90deg, var(--bs-warning), var(--bs-dark));
+}

@@ -1,0 +1,19 @@
+.ft-layout[b-3yhrr4je8n] {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.ft-header[b-3yhrr4je8n] {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.ft-main[b-3yhrr4je8n] {
+    flex: 1;
+}
+
+.content[b-3yhrr4je8n] {
+    padding-top: 0;
+}

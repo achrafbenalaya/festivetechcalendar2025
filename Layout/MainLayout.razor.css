@@ -1,0 +1,19 @@
+.ft-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.ft-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.ft-main {
+    flex: 1;
+}
+
+.content {
+    padding-top: 0;
+}

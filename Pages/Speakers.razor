@@ -1,0 +1,71 @@
+@page "/speakers"
+
+<PageTitle>Speakers</PageTitle>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-end g-3 mb-4">
+            <div class="col-12 col-lg-8">
+                <h1 class="display-6 fw-semibold mb-2">Speakers</h1>
+                <p class="text-body-secondary mb-0">
+                    Examples of community speakers contributing videos and articles across Azure, AI, and Microsoft technologies.
+                </p>
+            </div>
+            <div class="col-12 col-lg-4 text-lg-end">
+                <a class="btn btn-outline-primary" href="/">Back to home</a>
+            </div>
+        </div>
+
+        <div class="row g-3">
+            @foreach (var speaker in SpeakersList)
+            {
+                <div class="col-12 col-md-6 col-lg-4" @key="speaker.SessionId">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center gap-3">
+                                <img class="ft-avatar rounded-circle" src="festive.png" alt="@speaker.Name" />
+                                <div class="min-w-0">
+                                    <div class="d-flex flex-wrap gap-2 align-items-center">
+                                        <h2 class="h5 mb-0">@speaker.Name</h2>
+                                        <span class="badge text-bg-secondary">Session @speaker.SessionId</span>
+                                    </div>
+                                    <div class="text-body-secondary">@speaker.Role</div>
+                                </div>
+                            </div>
+
+                            <p class="mt-3 mb-0">@speaker.Description</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+@code {
+    private sealed record Speaker(string Name, string Role, string Description, string SessionId);
+
+    private static readonly IReadOnlyList<Speaker> SpeakersList =
+    [
+        new("Speaker", "Cloud Solution Architect", "Azure landing zones, governance and real-world platform patterns.", "AZ-001"),
+        new("Speaker", "AI Engineer", "Building reliable AI features with evaluation and guardrails.", "AI-002"),
+        new("Speaker", "Microsoft MVP", "Modern .NET performance tips and shipping faster with great DX.", "MS-003"),
+        new("Speaker", "DevOps Lead", "CI/CD on Azure: pipelines, deployments, and safe rollouts.", "AZ-004"),
+        new("Speaker", "Data Scientist", "Responsible AI: practical approaches to safety and governance.", "AI-005"),
+        new("Speaker", "Platform Engineer", "Scaling microservices with Azure-native services and observability.", "AZ-006"),
+        new("Speaker", "Security Engineer", "Identity-first security with Entra ID and Zero Trust fundamentals.", "MS-007"),
+        new("Speaker", "Software Architect", "Designing event-driven systems with Microsoft tooling and patterns.", "MS-008"),
+        new("Speaker", "Cloud Developer", "Serverless apps on Azure: functions, events, and integrations.", "AZ-009"),
+        new("Speaker", "AI Product Builder", "Agentic apps: turning workflows into assistants that help users.", "AI-010"),
+        new("Speaker", "Developer Advocate", "Community learning, content creation, and teaching by doing.", "MS-011"),
+        new("Speaker", "Full-Stack Developer", "Blazor WASM for modern web apps: patterns, pitfalls, and wins.", "MS-012"),
+        new("Speaker", "Cloud Engineer", "Cost and performance optimization on Azure without surprises.", "AZ-013"),
+        new("Speaker", "SRE", "Monitoring, tracing, and incident response for cloud-native workloads.", "AZ-014"),
+        new("Speaker", "ML Engineer", "From notebooks to production: MLOps essentials and automation.", "AI-015"),
+        new("Speaker", "Solutions Consultant", "Integration patterns across Microsoft services for real projects.", "MS-016"),
+        new("Speaker", "Data Engineer", "Streaming and analytics pipelines: building dependable data flows.", "AZ-017"),
+        new("Speaker", "App Modernization Specialist", "Modernizing legacy apps to .NET and Azure step-by-step.", "MS-018"),
+        new("Speaker", "Tech Lead", "Architecting for scale: resiliency patterns and great user experiences.", "AZ-019"),
+        new("Speaker", "AI Researcher", "Prompting, RAG, and practical techniques for better AI answers.", "AI-020"),
+    ];
+}
