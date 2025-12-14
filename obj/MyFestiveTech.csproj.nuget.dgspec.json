@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Achraf_home\\Demos_labs\\festive_tech_2025\\MyFestiveTech\\MyFestiveTech.csproj": {}
+    "C:\\Achraf_home\\Demos_labs\\festive_tech_2025\\MyFestiveTech\\MyFestiveTech.csproj": {}
   },
   "projects": {
-    "c:\\Achraf_home\\Demos_labs\\festive_tech_2025\\MyFestiveTech\\MyFestiveTech.csproj": {
+    "C:\\Achraf_home\\Demos_labs\\festive_tech_2025\\MyFestiveTech\\MyFestiveTech.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Achraf_home\\Demos_labs\\festive_tech_2025\\MyFestiveTech\\MyFestiveTech.csproj",
+        "projectUniqueName": "C:\\Achraf_home\\Demos_labs\\festive_tech_2025\\MyFestiveTech\\MyFestiveTech.csproj",
         "projectName": "MyFestiveTech",
-        "projectPath": "c:\\Achraf_home\\Demos_labs\\festive_tech_2025\\MyFestiveTech\\MyFestiveTech.csproj",
+        "projectPath": "C:\\Achraf_home\\Demos_labs\\festive_tech_2025\\MyFestiveTech\\MyFestiveTech.csproj",
         "packagesPath": "C:\\Users\\Ben_A\\.nuget\\packages\\",
-        "outputPath": "c:\\Achraf_home\\Demos_labs\\festive_tech_2025\\MyFestiveTech\\obj\\",
+        "outputPath": "C:\\Achraf_home\\Demos_labs\\festive_tech_2025\\MyFestiveTech\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

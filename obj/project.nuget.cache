@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "i240y04IwSU=",
+  "dgSpecHash": "6wIc8PQmVVs=",
   "success": true,
-  "projectFilePath": "c:\\Achraf_home\\Demos_labs\\festive_tech_2025\\MyFestiveTech\\MyFestiveTech.csproj",
+  "projectFilePath": "C:\\Achraf_home\\Demos_labs\\festive_tech_2025\\MyFestiveTech\\MyFestiveTech.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ben_A\\.nuget\\packages\\microsoft.aspnetcore.authorization\\9.0.0\\microsoft.aspnetcore.authorization.9.0.0.nupkg.sha512",
     "C:\\Users\\Ben_A\\.nuget\\packages\\microsoft.aspnetcore.components\\9.0.0\\microsoft.aspnetcore.components.9.0.0.nupkg.sha512",
