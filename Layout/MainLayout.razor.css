@@ -10,6 +10,12 @@
     z-index: 10;
 }
 
+.ft-header .navbar{
+    backdrop-filter: blur(6px);
+    background: rgba(255,255,255,0.6);
+    box-shadow: 0 6px 18px rgba(14,22,50,0.04);
+}
+
 .ft-main {
     flex: 1;
 }

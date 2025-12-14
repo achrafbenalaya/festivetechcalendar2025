@@ -28,3 +28,23 @@ The application follows modern best practices for Blazor WASM development.
 - Implement efficient rendering techniques
 - Consider using pre-rendering where appropriate
 - Implement proper cancellation token handling
+
+## Demo & UX Expectations
+- Treat this project as a demo-ready application
+- Prioritize visual polish, UX clarity, and smooth interactions
+- Prefer elegant layouts, consistent spacing, and accessible color contrast
+- Use subtle animations and hover effects where they enhance usability
+- Avoid over-engineering; keep code readable and presentation-friendly
+
+## Explanation & Learning
+- When generating or modifying UI components, explain:
+  - What was changed
+  - Why it improves UX or maintainability
+  - Any Blazor-specific best practices applied
+- Use short, clear explanations suitable for live demos
+
+## Design System
+- Prefer CSS variables for colors, spacing, and typography
+- Ensure light and dark mode compatibility
+- Use semantic HTML elements inside Blazor components
+- Keep styles centralized in `app.css`
