@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "MyFestiveTech",
   "resources": {
-    "hash": "sha256-mfEXPD2UsY/ZOGpZnaiNJvUY5R4HwAtuBteKE6te+Wc=",
+    "hash": "sha256-5C/WKbxWV0x2IbmL8LMiqhfM6j/94SQeQbYc2I5euCk=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Components.7e7vsnaldc.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Forms.yro7n2ks67.wasm": "Microsoft.AspNetCore.Components.Forms.wasm",
@@ -46,7 +46,7 @@
       "System.Text.RegularExpressions.cg25xf85er.wasm": "System.Text.RegularExpressions.wasm",
       "System.pv26mjdt84.wasm": "System.wasm",
       "System.Private.CoreLib.feuu4yhdlq.wasm": "System.Private.CoreLib.wasm",
-      "MyFestiveTech.tx3rzmcsed.wasm": "MyFestiveTech.wasm",
+      "MyFestiveTech.ruzrhr2qae.wasm": "MyFestiveTech.wasm",
       "dotnet.native.ry0enmuv25.js": "dotnet.native.js",
       "dotnet.native.p09eh5p6zs.wasm": "dotnet.native.wasm",
       "dotnet.js": "dotnet.js",
@@ -115,7 +115,7 @@
       "System.Text.Json.a3056ogspp.wasm": "sha256-trUJgqUj754YK6+YtgXylu4iX6TCVex5mSB15VqzJNQ=",
       "System.Text.RegularExpressions.cg25xf85er.wasm": "sha256-rLhKFA6Wr5NsTFcStt0Jce24vQpavUB9eKsBKM9Ikuw=",
       "System.pv26mjdt84.wasm": "sha256-FWbLTP9tkbJhG62kTuy3/pDFGjj0IDM8oi4tIQOYO6M=",
-      "MyFestiveTech.tx3rzmcsed.wasm": "sha256-sSfUw3kQHAA5BxUX9/9PcFjQQJf35elimjStX1hz8e4="
+      "MyFestiveTech.ruzrhr2qae.wasm": "sha256-vXQWnj+TZ/COOiB3fRdWwmUVxdumkjLV+AE8KimmaI8="
     }
   },
   "cacheBootResources": true,
