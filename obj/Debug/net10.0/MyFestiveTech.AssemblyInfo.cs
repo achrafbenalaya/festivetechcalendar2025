@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyFestiveTech")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b45af91d366da32245288c375f5df236227751c7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1e6b1b9aa16a35d8a4d48e70f56a6eb573a62dec")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyFestiveTech")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyFestiveTech")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
